@@ -60,7 +60,8 @@ Na primeira aula foi apresentada a disciplina, a ementa, o planejamento e as ori
 ---
 
 ## Desafios da disciplina de DDM
-Diante
+Diante do contexto de IA, mercado e ecossistema:
+- Consolidar a parte teórica de **POO** na prática
 
 Tempo limite: 1 aula.
 
