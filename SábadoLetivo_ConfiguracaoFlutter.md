@@ -161,3 +161,121 @@ Esse conhecimento é essencial antes de iniciar a implementação das funcionali
 
 - Entender o que são **widgets**
 - Compreender como a **interface do Flutter é construída**
+
+
+# Registro de Erros e Correções – Instalação do Flutter
+
+## 🛑 Erro 1 – Comando `flutter` não reconhecido no terminal
+
+### Descrição do erro
+Ao tentar executar o comando:
+```bash
+flutter doctor
+```
+o terminal retornava que o comando flutter não era reconhecido.
+
+Causa
+O Flutter SDK estava instalado no computador, porém:
+
+O caminho da pasta flutter/bin não estava configurado corretamente no PATH do sistema.
+
+Passos para corrigir
+Localizei a pasta onde o Flutter foi instalado
+
+Copiei o caminho da pasta:
+
+flutter/bin
+Adicionei esse caminho às Variáveis de Ambiente do sistema
+
+Reiniciei o terminal
+
+Executei novamente:
+
+flutter doctor
+Resultado
+O comando passou a funcionar corretamente e o Flutter foi reconhecido no sistema.
+
+🛑 Erro 2 – Problemas apontados pelo flutter doctor
+Descrição do erro
+Após rodar o comando:
+
+flutter doctor
+o Flutter indicou alguns itens com erro ou aviso (❌ / ⚠️).
+
+Causa
+Android SDK não totalmente configurado
+
+Falta de componentes necessários para executar apps Android
+
+Licenças do Android não aceitas
+
+Passos para corrigir
+Abri o Android Studio
+
+Instalei os componentes recomendados pelo Flutter
+
+Configurei o Android SDK
+
+Executei o comando:
+
+flutter doctor --android-licenses
+Aceitei todas as licenças solicitadas
+
+Resultado
+O flutter doctor passou a mostrar os itens como configurados corretamente.
+
+🛑 Erro 3 – Projeto criado, mas app não rodava
+Descrição do erro
+Após criar o projeto Flutter, o aplicativo não iniciava corretamente no emulador ou dispositivo.
+
+Causa
+Nenhum dispositivo/emulador estava ativo
+
+O Flutter não tinha onde executar o app
+
+Passos para corrigir
+Abri o Android Studio
+
+Iniciei um Emulador Android
+
+(ou conectei um celular via USB)
+
+Verifiquei se o dispositivo aparecia com:
+
+flutter devices
+Executei o projeto novamente
+
+Resultado
+O aplicativo iniciou corretamente no dispositivo selecionado.
+
+🛑 Erro 4 – Dúvidas com a estrutura do projeto
+Descrição do erro
+Ao abrir o projeto, a quantidade de pastas e arquivos causou confusão inicial.
+
+Causa
+Falta de familiaridade com a estrutura padrão do Flutter
+
+Passos para corrigir
+Analisei a estrutura do projeto com calma
+
+Identifiquei que:
+
+O código principal fica na pasta lib/
+
+O arquivo inicial é o main.dart
+
+Entendi que as outras pastas são específicas para cada plataforma
+
+Resultado
+Passei a entender melhor a organização do projeto e onde realmente devo focar.
+
+🧩 Conclusão
+Os erros encontrados durante a instalação e configuração do Flutter foram importantes para:
+
+Aprender a configurar corretamente o ambiente
+
+Entender como o Flutter depende do sistema
+
+Ganhar mais segurança para os próximos passos
+
+Todos os problemas foram resolvidos seguindo a documentação e utilizando as ferramentas indicadas.
