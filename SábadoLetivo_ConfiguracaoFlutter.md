@@ -165,117 +165,91 @@ Esse conhecimento é essencial antes de iniciar a implementação das funcionali
 
 # Registro de Erros e Correções – Instalação do Flutter
 
+# 📋 Registro de Erros e Correções – Instalação do Flutter
+
+Este registro documenta **apenas os erros que ocorreram até a etapa atual da instalação do Flutter**, bem como os comandos executados e as ações realizadas para correção.
+
+---
+
 ## 🛑 Erro 1 – Comando `flutter` não reconhecido no terminal
 
 ### Descrição do erro
 Ao tentar executar o comando:
-```bash
-flutter doctor
-```
-o terminal retornava que o comando flutter não era reconhecido.
-
-Causa
-O Flutter SDK estava instalado no computador, porém:
-
-O caminho da pasta flutter/bin não estava configurado corretamente no PATH do sistema.
-
-Passos para corrigir
-Localizei a pasta onde o Flutter foi instalado
-
-Copiei o caminho da pasta:
-
-flutter/bin
-Adicionei esse caminho às Variáveis de Ambiente do sistema
-
-Reiniciei o terminal
-
-Executei novamente:
 
 flutter doctor
-Resultado
-O comando passou a funcionar corretamente e o Flutter foi reconhecido no sistema.
 
-🛑 Erro 2 – Problemas apontados pelo flutter doctor
-Descrição do erro
-Após rodar o comando:
+
+o terminal retornava uma mensagem informando que o comando `flutter` não era reconhecido.
+
+### Causa
+O Flutter SDK já estava instalado no computador, porém o caminho da pasta `flutter/bin` **não estava configurado nas variáveis de ambiente (PATH)** do sistema.
+
+### Passos realizados para corrigir
+1. Localizei a pasta onde o Flutter SDK foi extraído  
+2. Copiei o caminho da pasta `flutter/bin`  
+3. Adicionei esse caminho às **Variáveis de Ambiente (PATH)** do Windows  
+4. Reiniciei o terminal  
+5. Executei novamente o comando:
 
 flutter doctor
-o Flutter indicou alguns itens com erro ou aviso (❌ / ⚠️).
 
-Causa
-Android SDK não totalmente configurado
 
-Falta de componentes necessários para executar apps Android
+### Resultado
+O comando passou a ser reconhecido e o Flutter funcionou corretamente no terminal.
 
-Licenças do Android não aceitas
+---
 
-Passos para corrigir
-Abri o Android Studio
+## 🛑 Erro 2 – Falha ao aceitar licenças do Android SDK
 
-Instalei os componentes recomendados pelo Flutter
+### Descrição do erro
+Após executar:
 
-Configurei o Android SDK
+flutter doctor
 
-Executei o comando:
+
+o Flutter indicou erro relacionado ao Android SDK.  
+Ao tentar aceitar as licenças, ocorreu o seguinte erro:
 
 flutter doctor --android-licenses
-Aceitei todas as licenças solicitadas
+Could not find an option named "--android-licenses".
 
-Resultado
-O flutter doctor passou a mostrar os itens como configurados corretamente.
 
-🛑 Erro 3 – Projeto criado, mas app não rodava
-Descrição do erro
-Após criar o projeto Flutter, o aplicativo não iniciava corretamente no emulador ou dispositivo.
+Em uma nova tentativa, apareceu o erro:
 
-Causa
-Nenhum dispositivo/emulador estava ativo
+Android sdkmanager not found.
+Update to the latest Android SDK and ensure that the cmdline-tools are installed.
 
-O Flutter não tinha onde executar o app
 
-Passos para corrigir
-Abri o Android Studio
+### Causa
+O **Android SDK não estava totalmente configurado**, pois os **Command-line Tools (sdkmanager)** ainda não estavam instalados ou reconhecidos pelo sistema.
 
-Iniciei um Emulador Android
+### Passos realizados para corrigir
+1. Abri o **Android Studio**
+2. Acessei o **SDK Manager**
+3. Instalei os **Android SDK Command-line Tools**
+4. Verifiquei a configuração do Android SDK
+5. Executei novamente o comando no terminal:
 
-(ou conectei um celular via USB)
+flutter doctor --android-licenses
 
-Verifiquei se o dispositivo aparecia com:
 
-flutter devices
-Executei o projeto novamente
+6. Aceitei todas as licenças solicitadas
 
-Resultado
-O aplicativo iniciou corretamente no dispositivo selecionado.
+### Resultado
+Após a instalação dos componentes corretos, o comando funcionou e as licenças do Android foram aceitas com sucesso.
 
-🛑 Erro 4 – Dúvidas com a estrutura do projeto
-Descrição do erro
-Ao abrir o projeto, a quantidade de pastas e arquivos causou confusão inicial.
+---
 
-Causa
-Falta de familiaridade com a estrutura padrão do Flutter
+## 🧩 Situação atual
 
-Passos para corrigir
-Analisei a estrutura do projeto com calma
+Até este momento:
 
-Identifiquei que:
+- ✅ O Flutter SDK está instalado  
+- ✅ O comando `flutter` funciona no terminal  
+- ✅ O Android SDK está configurado  
+- ✅ As licenças do Android foram aceitas  
+- ⚠️ Outros erros **ainda não ocorreram**, pois as próximas etapas ainda não foram realizadas  
 
-O código principal fica na pasta lib/
+Este registro será atualizado conforme novas etapas forem executadas.
 
-O arquivo inicial é o main.dart
 
-Entendi que as outras pastas são específicas para cada plataforma
-
-Resultado
-Passei a entender melhor a organização do projeto e onde realmente devo focar.
-
-🧩 Conclusão
-Os erros encontrados durante a instalação e configuração do Flutter foram importantes para:
-
-Aprender a configurar corretamente o ambiente
-
-Entender como o Flutter depende do sistema
-
-Ganhar mais segurança para os próximos passos
-
-Todos os problemas foram resolvidos seguindo a documentação e utilizando as ferramentas indicadas.
