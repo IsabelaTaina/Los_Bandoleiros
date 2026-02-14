@@ -68,3 +68,95 @@ Após a instalação, criei um novo projeto Flutter.
 void main() {
   runApp(const MyApp());
 }
+
+## Estrutura do Projeto Flutter
+
+### Arquivo `main.dart`
+
+- Este arquivo é o **ponto de entrada do aplicativo**
+- É a **primeira coisa que o Flutter executa** ao iniciar o app
+- A função `runApp()` informa ao Flutter **qual widget será exibido na tela**
+- Todo aplicativo Flutter começa a partir deste arquivo
+
+📌 Tudo começa pelo `main.dart`.
+
+---
+
+### Arquivo `pubspec.yaml`
+
+- Arquivo de **configuração do projeto**
+- Utilizado para definir:
+  - Dependências (pacotes externos)
+  - Versão do aplicativo
+  - Assets (imagens, fontes e ícones)
+
+📌 Sempre que algo novo é adicionado ao projeto, este arquivo costuma ser alterado.
+
+---
+
+## Outras Pastas do Projeto
+
+### Pasta `android/`
+
+- Contém configurações específicas para a plataforma Android
+- Geralmente não é alterada no início do desenvolvimento
+
+---
+
+### Pasta `ios/`
+
+- Contém configurações específicas para a plataforma iOS
+
+---
+
+### Pasta `web/`
+
+- Estrutura utilizada quando o aplicativo é executado como um site
+
+---
+
+### Pastas `windows/`, `linux/` e `macos/`
+
+- Contêm configurações específicas para aplicativos desktop
+
+📌 Mesmo existindo várias pastas no projeto, **o código principal permanece na pasta `lib/`**.
+
+---
+
+## Arquivos Auxiliares
+
+### Arquivo `.gitignore`
+
+- Define quais arquivos e pastas **não devem ser enviados para o repositório GitHub**
+
+---
+
+### Arquivo `README.md`
+
+- Arquivo de documentação do projeto
+- Utilizado para explicar o objetivo e o funcionamento do aplicativo
+
+---
+
+## Conclusão
+
+Neste momento:
+
+- O Flutter está instalado corretamente
+- O projeto foi criado com sucesso
+- Ainda não foram desenvolvidas funcionalidades
+
+No entanto, já compreendo:
+
+- Como o projeto Flutter é organizado
+- Onde fica o código principal
+- Qual é a função de cada arquivo e pasta
+
+Esse conhecimento é essencial antes de iniciar a implementação das funcionalidades do aplicativo.
+
+---
+
+## Próximos Passos
+
+- Entender o que são **widgets**
+- Compreender como a **interface do Flutter é construída**
