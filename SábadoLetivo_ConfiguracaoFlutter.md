@@ -176,7 +176,9 @@ Este registro documenta **apenas os erros que ocorreram até a etapa atual da in
 ### Descrição do erro
 Ao tentar executar o comando:
 
-flutter doctor
+```dart
+flutter --doctor
+```
 
 
 o terminal retornava uma mensagem informando que o comando `flutter` não era reconhecido.
@@ -191,7 +193,9 @@ O Flutter SDK já estava instalado no computador, porém o caminho da pasta `flu
 4. Reiniciei o terminal  
 5. Executei novamente o comando:
 
-flutter doctor
+```dart
+flutter --doctor
+```
 
 
 ### Resultado
@@ -204,8 +208,9 @@ O comando passou a ser reconhecido e o Flutter funcionou corretamente no termina
 ### Descrição do erro
 Após executar:
 
-flutter doctor
-
+```dart
+flutter --doctor
+```
 
 o Flutter indicou erro relacionado ao Android SDK.  
 Ao tentar aceitar as licenças, ocorreu o seguinte erro:
@@ -230,8 +235,10 @@ O **Android SDK não estava totalmente configurado**, pois os **Command-line Too
 4. Verifiquei a configuração do Android SDK
 5. Executei novamente o comando no terminal:
 
+```dart
 flutter doctor --android-licenses
-
+}
+```
 
 6. Aceitei todas as licenças solicitadas
 
