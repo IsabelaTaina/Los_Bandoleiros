@@ -68,6 +68,7 @@ Após a instalação, criei um novo projeto Flutter.
 void main() {
   runApp(const MyApp());
 }
+```
 
 ## Estrutura do Projeto Flutter
 
