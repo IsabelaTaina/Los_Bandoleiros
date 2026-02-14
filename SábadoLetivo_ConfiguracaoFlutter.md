@@ -237,7 +237,7 @@ O **Android SDK não estava totalmente configurado**, pois os **Command-line Too
 
 ```dart
 flutter doctor --android-licenses
-}
+
 ```
 
 6. Aceitei todas as licenças solicitadas
