@@ -11,3 +11,5 @@ Execução
 Pré-resultado
 
 Resultado
+
+Fazer o alinhamneto
