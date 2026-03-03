@@ -22,6 +22,7 @@ Grupo 3 - Paramêtros Posicionais
 - Opcionais: Torna um parâmetro opcional, determinado por "[]", se nenhum valor for passado ele gera um valor padrão (null).
 Caso nenhum valor seja passado, ele vai imprimir apenas o paramêtro definido.
 Pode ser passado um valor diretamente dentro do paramêtro opcional.
--Nomeados: 
+-Nomeados: definidos usando o {}; v
+Podem ser opcionais ou obrigatórios.
 
 
